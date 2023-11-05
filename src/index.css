@@ -26,10 +26,13 @@ body {
     display: flex;
 }
 .nav > label {
+    font-size: 24px;
     flex-grow: 1;
+    text-shadow: 2px 2px 2px black;
 }
 .tabs {
     position: relative;
+    margin: auto;
     padding-right: 18px;
 }
 
@@ -37,6 +40,7 @@ body {
     padding-right: 8px;
     text-decoration: none;
     color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
 }
 
 /* END NAV HEADER */
@@ -44,6 +48,7 @@ body {
 /* TODO LIST */
 .todo-wrapper {
     width: 100%;
+    margin: auto;
 }
 .form {
     position: relative;
@@ -57,12 +62,16 @@ body {
     font-size: 22px;
     margin-right: 12px;
 }
+.form > button {
+    margin-left: 8px;
+}
 .list {
     display: flex;
     flex-direction: column;
     /* background-color: red; */
 }
-li {
+.list > li {
+    padding: 6px;
     list-style-type: none;
 }
 .delete-button {
@@ -76,7 +85,7 @@ li {
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: 0;
+    right: 12px;
     /* background-color: yellowgreen; */
 }
 .sidebar > a {
