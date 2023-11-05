@@ -1,0 +1,88 @@
+body {
+    background: rgb(31, 94, 136);
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    font-family: monospace;
+    font-size: 16px;
+    height: 100vh;
+}
+  
+.main-wrapper {
+    /* display: flex; */
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    color: white;
+    background-color: rgb(52, 10, 94);
+}
+
+/* NAV HEADER */
+.nav {
+    width: 100%;
+    /* height: 40px; */
+    padding: 16px;
+    background-color: rgb(14, 94, 94);
+    display: flex;
+}
+.nav > label {
+    flex-grow: 1;
+}
+.tabs {
+    position: relative;
+    padding-right: 18px;
+}
+
+.tabs > a {
+    padding-right: 8px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* END NAV HEADER */
+
+/* TODO LIST */
+.todo-wrapper {
+    width: 100%;
+}
+.form {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 25px;
+    /* background-color: blue; */
+}
+.form > label {
+    font-size: 22px;
+    margin-right: 12px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+li {
+    list-style-type: none;
+}
+.delete-button {
+    margin-left: 10px;
+}
+/* END TODO LIST */
+
+/* SIDEBAR */
+.sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    /* background-color: yellowgreen; */
+}
+.sidebar > a {
+    padding: 6px;
+    text-decoration: none;
+    font-size: 24px;
+    color: whitesmoke;
+}
+/* END SIDEBAR */
