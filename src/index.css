@@ -26,6 +26,7 @@ body {
     display: flex;
 }
 .nav > label {
+    padding-left: 10px;
     font-size: 24px;
     flex-grow: 1;
     text-shadow: 2px 2px 2px black;
