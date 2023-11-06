@@ -8,9 +8,6 @@ export function Navbar() {
         const fetchPlayerData = async () => {
             try {
                 const response = await fetch(`https://api.opendota.com/api/players/${accountId}`);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch player data');
-                }
                 const data = await response.json();
                 setPlayerData(data);
             } catch (error) {
