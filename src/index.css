@@ -16,6 +16,9 @@ body {
     color: white;
     background-color: rgb(52, 10, 94);
 }
+.main-layout {
+    display: flex;;
+}
 
 /* NAV HEADER */
 .nav {
@@ -49,7 +52,6 @@ body {
 /* TODO LIST */
 .todo-wrapper {
     width: 100%;
-    margin: auto;
 }
 .form {
     position: relative;
@@ -96,3 +98,17 @@ body {
     color: whitesmoke;
 }
 /* END SIDEBAR */
+
+/* START CALENDAR */
+.calendar {
+    padding: 12px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.date-section {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}

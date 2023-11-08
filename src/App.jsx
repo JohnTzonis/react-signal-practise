@@ -1,16 +1,18 @@
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar"
 import { ToDoList } from "./components/ToDoList";
+import { CalendarApp } from "./components/CalendarApp";
 
 function App() {
 
   return (
     <div className="main-wrapper">
       <Navbar />
-      <main>
+      <div className="main-layout">
         <ToDoList />
-      </main>
-      <Sidebar />
+        <CalendarApp />
+      </div>
+      {/* <Sidebar /> */}
     </div>
   )
 }
