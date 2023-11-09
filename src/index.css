@@ -112,3 +112,11 @@ body {
     display: flex;
     align-items: center;
 }
+/* END OF CALENDAR */
+
+/* START OF LOGIN */
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

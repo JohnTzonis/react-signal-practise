@@ -1,7 +1,8 @@
 import { Navbar } from "./components/Navbar";
-import { Sidebar } from "./components/Sidebar"
+// import { Sidebar } from "./components/Sidebar"
 import { ToDoList } from "./components/ToDoList";
 import { CalendarApp } from "./components/CalendarApp";
+import Register from "./components/Register";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <div className="main-wrapper">
       <Navbar />
       <div className="main-layout">
+        <Register />
         <ToDoList />
         <CalendarApp />
       </div>
