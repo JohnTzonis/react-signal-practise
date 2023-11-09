@@ -36,14 +36,24 @@ const PlayerInfo = () => {
   if (error) {
     return <p>{error}</p>;
   }
-  const playerName = playerData.names[0].name; // Access player name from playerData
+  const playerName = playerData.names[0].name;
+  const behaviorScore = playerData.behaviorScore;
   const { avatar } = playerData.steamAccount;
 
   return (
-    <div>
+    <div className="h-full p-4 border-4 border-white bg-purple-900">
       <h2>Player Information</h2>
       <p>Name: {playerName}</p>
-      <img src={avatar} alt="Player Avatar" style={{ width: '100px', height: '100px' }} />
+      <img
+        className="fit p-1"
+        src={avatar}
+        alt="Player Avatar"
+      />
+      <p>Behavior Score: 
+        <span className="text-green-500">
+            {behaviorScore}
+        </span>
+      </p>
     </div>
   );
 };

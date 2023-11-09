@@ -11,9 +11,11 @@ function App() {
     <div className="main-wrapper">
       <Navbar />
       <div className="flex">
-        <GuildMembers accountId={accountId} />
         <ToDoList />
-        <CalendarApp />
+        <div className="flex-grow">
+            <CalendarApp />
+        </div>
+        <GuildMembers accountId={accountId} />
       </div>
       {/* <Sidebar /> */}
     </div>
