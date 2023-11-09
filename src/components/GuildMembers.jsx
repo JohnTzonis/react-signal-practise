@@ -41,15 +41,19 @@ const PlayerInfo = () => {
   const { avatar } = playerData.steamAccount;
 
   return (
-    <div className="h-full p-4 border-4 border-white bg-purple-900">
-      <h2>Player Information</h2>
-      <p>Name: {playerName}</p>
+    <div className="h-full flex flex-col items-center p-2 border-4 border-white bg-purple-900">
+      <p className="text-sm text-yellow-200">Player Information</p>
+      <p className="text-xs text-yellow-200 px-3">Name:
+        <span className="text-lg text-teal-200 p-1">
+            {playerName}
+        </span>
+        </p>
       <img
-        className="fit p-1"
+        className="fit p-1 border-2 border-yellow-300"
         src={avatar}
         alt="Player Avatar"
       />
-      <p>Behavior Score: 
+      <p className="mt-1">Behavior Score: 
         <span className="text-green-500">
             {behaviorScore}
         </span>
