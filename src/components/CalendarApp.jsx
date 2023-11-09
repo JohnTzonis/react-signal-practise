@@ -42,44 +42,39 @@ const events = [
 ];
 
 export function CalendarApp() {
-    const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+    const [newEvent, setNewEvent] = useState({ title: "", start: null, end: null });
     const [allEvents, setAllEvents] = useState(events);
 
     function handleAddEvent() {
-        
-        for (let i=0; i<allEvents.length; i++){
+        // Check if start and end dates are selected
+        if (newEvent.start && newEvent.end) {
+            // Check for date clash with existing events
+            for (let i = 0; i < allEvents.length; i++) {
+                const d1 = new Date(allEvents[i].start);
+                const d2 = new Date(newEvent.start);
+                const d3 = new Date(allEvents[i].end);
+                const d4 = new Date(newEvent.end);
 
-            const d1 = new Date (allEvents[i].start);
-            const d2 = new Date(newEvent.start);
-            const d3 = new Date(allEvents[i].end);
-            const d4 = new Date(newEvent.end);
-      /*
-          console.log(d1 <= d2);
-          console.log(d2 <= d3);
-          console.log(d1 <= d4);
-          console.log(d4 <= d3);
-            */
+                if ((d1 <= d2 && d2 <= d3) || (d1 <= d4 && d4 <= d3)) {
+                    alert("CLASH");
+                    return; // Exit function if there is a clash
+                }
+            }
 
-             if (
-              ( (d1  <= d2) && (d2 <= d3) ) || ( (d1  <= d4) &&
-                (d4 <= d3) )
-              )
-            {   
-                alert("CLASH"); 
-                break;
-             }
-    
+            // Add the new event
+            setAllEvents([...allEvents, newEvent]);
+            // Reset the newEvent state
+            setNewEvent({ title: "", start: null, end: null });
+        } else {
+            alert("Please select both start and end dates");
         }
-        
-        
-        setAllEvents([...allEvents, newEvent]);
     }
 
     return (
         <div className="calendar">
-            <h2>Add New Event</h2>
             <div className="date-section">
                 <input
+                    className="m-1 text-gray-700 py-1 px-2 font-semibold min-w-[250px]"
                     type="text"
                     placeholder="Add Title"
                     style={{ width: "20%", marginRight: "10px" }}
@@ -87,25 +82,17 @@ export function CalendarApp() {
                     onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
                 />
                 <DatePicker
-                    placeholderText="Date"
-                    style={{ padding: "10px" }}
+                    className="m-1 text-gray-700 py-1 px-2 font-semibold max-w-[120px]"
+                    placeholderText="Select Date"
+                    // style={{ padding: "10px" }}
                     selected={newEvent.start}
-                    onChange={(start) => setNewEvent({ ...newEvent, start })}
+                    onChange={(date) => setNewEvent({ ...newEvent, start: date, end: date })}
+                    selectsStart
+                    startDate={newEvent.start}
+                    endDate={newEvent.end}
+                    dateFormat="MM/dd/yyyy"
                 />
-                {/* <TimePicker /> */}
-                <div>
-                    <span> </span>
-                </div>
-                {/* <DatePicker
-                    placeholderText="End Date"
-                    style={{ padding: "10px" }}
-                    selected={newEvent.end}
-                    onChange={(time) => setNewEvent({ ...newEvent, time })} 
-                /> */}
-                <button
-                    style={{ margin: "10px" }}
-                    onClick={handleAddEvent}
-                >
+                <button style={{ margin: "10px" }} onClick={handleAddEvent}>
                     Add Event
                 </button>
             </div>
@@ -114,7 +101,14 @@ export function CalendarApp() {
                 events={allEvents}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ color: "red", backgroundColor: "black", height: 300, margin: "24px", overflow: "auto" }}
+                style={{
+                    color: "red",
+                    backgroundColor: "black",
+                    height: 300,
+                    margin: "24px",
+                    overflow: "auto",
+                    zIndex: 0,
+                }}
             />
         </div>
     );
