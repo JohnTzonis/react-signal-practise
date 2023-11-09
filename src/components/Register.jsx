@@ -43,28 +43,53 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="flex items-center">
       {loggedInUser ? (
-        <>
-          <p>Welcome, {loggedInUser.username || 'User'}!</p>
-          <button onClick={handleLogout}>Logout</button>
-        </>
+        <div className="flex text-xl">
+          <div className="p-2 text-gray-200 text-shadow-default bg-gradient-to-r from-blue-500 to-green-500">
+            <span>
+                Welcome, 
+            </span>
+            <span>
+                {loggedInUser.username || 'User'}!
+            </span>
+        </div>
+          <button
+            className="ml-4 text-red-700 hover:text-red-400"
+            onClick={handleLogout}>Logout</button>
+        </div>
       ) : (
         <>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={handleRegister}>Register</button>
-          <button onClick={handleLogin}>Login</button>
+            <div className="flex flex-col">
+                <input
+                    className="m-1"
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                <input
+                    className="m-1"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+            </div>
+            <div className="flex flex-col">
+                <button
+                    className="text-xl"
+                    onClick={handleRegister}
+                >
+                    Register
+                </button>
+                <button
+                    className="text-xl"
+                    onClick={handleLogin}
+                >
+                    Login
+                </button>
+            </div>
         </>
       )}
     </div>

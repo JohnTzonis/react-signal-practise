@@ -11,6 +11,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@tabler/icons-react": "^2.40.0",
     "axios": "^1.6.1",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
@@ -24,7 +25,10 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
     "react-time-picker": "^6.5.2",
-    "switch": "^0.0.0"
+    "react-tippy": "^1.4.0",
+    "switch": "^0.0.0",
+    "tailwindcss-shadow": "^0.0.1",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
