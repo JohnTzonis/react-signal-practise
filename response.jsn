@@ -1,0 +1,388 @@
+"identity": {
+        "captainJackIdentityId": "8a71b0a3-e6ac-4aaf-8710-0165fbfa057b",
+        "feedLevel": 0,
+        "emailLevel": 0,
+        "dailyEmail": false,
+        "weeklyEmail": false,
+        "monthlyEmail": false,
+        "proCircuitFeedLevel": 0,
+        "proCircuitEmailLevel": 0,
+        "themeType": 0,s
+        "languageId": 0,
+        "isEmailValidated": false,
+        "emailHour": 0,
+        "lastDailyEmail": -62135596800,
+        "lastWeeklyEmail": -62135596800,
+        "lastMonthlyEmail": -62135596800,
+        "lastLeagueDailyEmail": -62135596800,
+        "lastTeamDailyEmail": -62135596800,
+        "lastProCircuitDailyEmail": -62135596800,
+        "unsubscribeCode": "00000000-0000-0000-0000-000000000000",
+        "steamAccountId": 0
+    },
+    "steamAccount": {
+        "id": 112067335,
+        "lastActiveTime": "2023-11-08T16:53:29",
+        "profileUri": "https://steamcommunity.com/id/tzonis/",
+        "realName": "",
+        "timeCreated": 1348628221,
+        "countryCode": "",
+        "cityId": 0,
+        "communityVisibleState": 0,
+        "name": "Freddy Krueger",
+        "avatar": "https://avatars.steamstatic.com/e51ac24ef88dea292a763c0030a0df802e92b2d4_full.jpg",
+        "primaryClanId": 103582791435773950,
+        "soloRank": 3265,
+        "partyRank": 2594,
+        "isDotaPlusSubscriber": true,
+        "dotaPlusOriginalStartDate": 1522095345,
+        "isAnonymous": false,
+        "isStratzPublic": false,
+        "smurfFlag": 0,
+        "smurfCheckDate": 1691275378,
+        "lastMatchDateTime": 1699462409,
+        "lastMatchRegionId": 3,
+        "dotaAccountLevel": 143
+    },
+    "battlePass": [
+        {
+            "eventId": 45,
+            "level": 54,
+            "isAnonymous": false
+        },
+        {
+            "eventId": 36,
+            "level": 36,
+            "bracket": 4,
+            "isAnonymous": false
+        },
+        {
+            "eventId": 29,
+            "level": 198,
+            "bracket": 4,
+            "isAnonymous": false
+        },
+        {
+            "eventId": 25,
+            "level": 69,
+            "bracket": 4,
+            "isAnonymous": false
+        },
+        {
+            "eventId": 22,
+            "level": 203,
+            "bracket": 4,
+            "isAnonymous": false
+        }
+    ],
+    "date": 1699462409,
+    "lastRegionId": 3,
+    "ranks": [
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2021-04-08T20:52:26.393932",
+            "isCore": true,
+            "rank": 45
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-04-24T12:07:10.188272",
+            "isCore": true,
+            "rank": 51
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-03-26T16:22:29.005982",
+            "isCore": true,
+            "rank": 52
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-02-06T22:57:05.412158",
+            "isCore": true,
+            "rank": 51
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-01-28T20:42:30.691233",
+            "isCore": true,
+            "rank": 45
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-01-22T02:48:58.430322",
+            "isCore": false,
+            "rank": 45
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-01-09T20:35:23.887145",
+            "isCore": false,
+            "rank": 44
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-01-07T21:54:58.784557",
+            "isCore": false,
+            "rank": 43
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2020-01-03T00:23:01.131989",
+            "isCore": true,
+            "rank": 44
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-12-31T13:20:20.117295",
+            "isCore": false,
+            "rank": 44
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-12-28T10:51:32.91711",
+            "isCore": true,
+            "rank": 45
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-12-27T11:20:34.956863",
+            "isCore": false,
+            "rank": 45
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-12-24T06:44:34.626014",
+            "isCore": true,
+            "rank": 51
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-11-26T16:18:33.66998",
+            "isCore": false,
+            "rank": 51
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-10-24T01:22:47.874862",
+            "isCore": true,
+            "rank": 52
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-10-06T15:16:22.197628",
+            "isCore": true,
+            "rank": 51
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-10-03T12:58:30.122866",
+            "isCore": true,
+            "rank": 47
+        },
+        {
+            "seasonRankId": 4,
+            "asOfDateTime": "2019-09-25T10:23:15.952388",
+            "isCore": true,
+            "rank": 46
+        },
+        {
+            "seasonRankId": 3,
+            "asOfDateTime": "2019-09-19T19:35:33.774649",
+            "isCore": true,
+            "rank": 61
+        },
+        {
+            "seasonRankId": 3,
+            "asOfDateTime": "2019-07-04T16:40:55.873427",
+            "isCore": true,
+            "rank": 57
+        },
+        {
+            "seasonRankId": 3,
+            "asOfDateTime": "2019-06-19T10:20:48",
+            "isCore": true,
+            "rank": 56
+        },
+        {
+            "seasonRankId": 3,
+            "asOfDateTime": "2019-06-03T16:54:01.657125",
+            "isCore": true,
+            "rank": 51
+        },
+        {
+            "seasonRankId": 3,
+            "asOfDateTime": "2019-02-23T02:41:42.430141",
+            "isCore": true,
+            "rank": 47
+        },
+        {
+            "seasonRankId": 3,
+            "asOfDateTime": "2019-02-16T00:33:41.76478",
+            "isCore": true,
+            "rank": 46
+        },
+        {
+            "seasonRankId": 2,
+            "asOfDateTime": "2019-01-29T13:12:14.9428",
+            "isCore": true,
+            "rank": 54
+        },
+        {
+            "seasonRankId": 2,
+            "asOfDateTime": "2018-09-30T02:21:24.433283",
+            "isCore": true,
+            "rank": 53
+        },
+        {
+            "seasonRankId": 2,
+            "asOfDateTime": "2018-09-06T18:01:39.001345",
+            "isCore": true,
+            "rank": 52
+        },
+        {
+            "seasonRankId": 2,
+            "asOfDateTime": "2018-08-23T23:46:32.391043",
+            "isCore": true,
+            "rank": 51
+        },
+        {
+            "seasonRankId": 2,
+            "asOfDateTime": "2018-08-01T00:44:44.446668",
+            "isCore": true,
+            "rank": 45
+        },
+        {
+            "seasonRankId": 2,
+            "asOfDateTime": "2018-07-20T20:30:50.253692",
+            "isCore": true,
+            "rank": 41
+        },
+        {
+            "seasonRankId": 1,
+            "asOfDateTime": "2018-06-06T13:36:51.539626",
+            "isCore": true,
+            "rank": 53
+        },
+        {
+            "seasonRankId": 1,
+            "asOfDateTime": "2018-03-24T00:55:04.025146",
+            "isCore": true,
+            "rank": 52
+        },
+        {
+            "seasonRankId": 1,
+            "asOfDateTime": "2018-01-26T16:31:32.584988",
+            "isCore": true,
+            "rank": 51
+        }
+    ],
+    "languageCode": [],
+    "firstMatchDate": 1352677492,
+    "matchCount": 8315,
+    "winCount": 4170,
+    "names": [
+        {
+            "name": "Freddy Krueger",
+            "lastseendatetime": 1697299150
+        },
+        {
+            "name": "johnak0s",
+            "lastseendatetime": 1671507924
+        },
+        {
+            "name": "Born Loser",
+            "lastseendatetime": 1671129184
+        },
+        {
+            "name": "johnak0s",
+            "lastseendatetime": 1610905639
+        },
+        {
+            "name": "Pedal to the Vettel",
+            "lastseendatetime": 1590590919
+        },
+        {
+            "name": "умер как герой",
+            "lastseendatetime": 1588963180
+        },
+        {
+            "name": "Tatsumaki",
+            "lastseendatetime": 1588479012
+        },
+        {
+            "name": "Tatsumaki Babooken",
+            "lastseendatetime": 1585891864
+        },
+        {
+            "name": "OG.N0tail",
+            "lastseendatetime": 1585846863
+        },
+        {
+            "name": "Tentin Quarantino",
+            "lastseendatetime": 1585776935
+        },
+        {
+            "name": "Nakojoh",
+            "lastseendatetime": 1584348182
+        },
+        {
+            "name": "Throw Ranger",
+            "lastseendatetime": 1582825872
+        },
+        {
+            "name": "johnak0s",
+            "lastseendatetime": 1574629781
+        },
+        {
+            "name": "Tatsumaki Babooken",
+            "lastseendatetime": 1538188349
+        },
+        {
+            "name": "Juri Han",
+            "lastseendatetime": 1532219078
+        },
+        {
+            "name": "johnak0s",
+            "lastseendatetime": 1518577636
+        },
+        {
+            "name": "Get Me Out Of Prison",
+            "lastseendatetime": 1514145239
+        },
+        {
+            "name": "Blame Me",
+            "lastseendatetime": 1513540336
+        },
+        {
+            "name": "DropDead",
+            "lastseendatetime": 1508116843
+        },
+        {
+            "name": "Solo Kariera",
+            "lastseendatetime": 1506282108
+        },
+        {
+            "name": "Travis Bickle",
+            "lastseendatetime": 1505946252
+        },
+        {
+            "name": "John Travolta",
+            "lastseendatetime": 1501669024
+        },
+        {
+            "name": "j.",
+            "lastseendatetime": 1469826184
+        }
+    ],
+    "team": {
+        "teamId": 9108221,
+        "firstMatchId": 7194678120,
+        "firstMatchDateTime": "2023-06-10T19:07:18",
+        "lastMatchId": 7194763450,
+        "lastMatchDateTime": "2023-06-10T20:06:20"
+    },
+    "behaviorScore": 10000,
+    "steamAccountId": 112067335,
+    "isFollowed": false
+}

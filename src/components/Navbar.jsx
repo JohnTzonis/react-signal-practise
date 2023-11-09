@@ -23,7 +23,7 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="flex w-full p-4 bg-gray-700">
+            <nav className="flex w-full p-4 bg-gray-700 items-center">
                 <label className="flex-grow p-2.5 text-2xl text-shadow-default">Ol'School Gaming</label>
                 <Register />
             </nav>
