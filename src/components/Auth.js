@@ -16,13 +16,32 @@ const AuthService = {
   login: async (username, password) => {
     try {
       const response = await axios.post(`${API_URL}/login`, { username, password });
-      return response.data; // Assuming the server returns user information on successful login
+      const { data } = response;
+
+      // Store the user token in localStorage
+      localStorage.setItem('userToken', data.token);
+
+      return data; // Assuming the server returns user information on successful login
     } catch (error) {
       console.error('Error logging in user:', error);
       throw error;
     }
   },
-  
+
+  logout: () => {
+    // Remove the user token from localStorage
+    localStorage.removeItem('userToken');
+  },
+
+  isLoggedIn: () => {
+    // Check if the user is logged in based on the presence of the token in localStorage
+    return !!localStorage.getItem('userToken');
+  },
+
+  getToken: () => {
+    // Retrieve the user token from localStorage
+    return localStorage.getItem('userToken');
+  },
 };
 
 export default AuthService;
