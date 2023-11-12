@@ -81,7 +81,7 @@ export function CalendarApp() {
             );
     
             days.push(
-              <td key={j} className="relative border border-white h-[150px] max-h-[150px] w-[100px] min-w-[100px] overflow-y-auto">
+              <td key={j} className="relative border border-white h-[100px] max-h-[100px] w-[100px] min-w-[100px] overflow-y-auto">
                 <div className="absolute left-1 top-1 text-teal-200 text-shadow-default">{currentDate.getDate()}</div>
                 <ul className="flex flex-col items-center pt-5 overflow-y-auto h-full">{getEventList(currentDate)}</ul>
               </td>

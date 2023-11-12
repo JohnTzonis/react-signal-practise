@@ -128,3 +128,30 @@ NAV HEADER
     align-items: center;
 }
 
+
+
+
+/* @layer components {
+    .c-tabs {
+      @apply py-1 flex flex-nowrap
+    }
+    .c-tabs__item {
+      @apply py-2 text-gray-500 font-semibold border-b border-solid border-transparent whitespace-nowrap
+    }
+    .c-tabs__item:not(:last-child) {
+      @apply mr-6
+    }
+    .c-tabs__item:focus {
+      @apply ring-0 outline-4 outline-offset-2 outline-blue-950 transition-colors
+    }
+    .c-tabs__item:hover {
+      @apply text-red-hover transition-colors
+    }
+    .c-tabs__item:active {
+      @apply text-red-hover
+    }
+    .c-tabs__item.is-active {
+      @apply text-black border-b border-solid border-black
+    }
+  } */
+  

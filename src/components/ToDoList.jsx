@@ -44,7 +44,7 @@ export function ToDoList() {
     }, [todos]);
 
     return (
-        <div className="w-full max-w-[400px] flex flex-col items-center max-h-[400px] overflow-y-auto bg-gradient-to-r from-sky-800 to-teal-600 border-4 border-white">
+        <div className="w-full h-[100vh] flex flex-col items-center max-h-[400px] overflow-y-auto bg-gradient-to-r from-sky-800 to-teal-600 border-4 border-white">
             <form onSubmit={addTodo} className="flex flex-col w-full pt-6 px-6 items-center">
                 <label className="text-xl">Notes</label>
                 <div>
