@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import Register from './Register';
 
 export function Navbar() {
@@ -24,7 +24,7 @@ export function Navbar() {
     return (
         <>
             <nav className="flex w-full p-4 bg-gray-700 items-center">
-                <label className="flex-grow p-2.5 text-2xl text-shadow-default">Ol'School Gaming</label>
+                <label className="flex-grow p-2.5 text-2xl text-shadow-default">Ol`School Gaming</label>
                 <Register />
             </nav>
         </>

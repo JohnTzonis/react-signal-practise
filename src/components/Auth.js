@@ -21,7 +21,7 @@ const AuthService = {
       // Store the user token in localStorage
       localStorage.setItem('userToken', data.token);
 
-      return data; // Assuming the server returns user information on successful login
+      return data; // Server returns user information on successful login
     } catch (error) {
       console.error('Error logging in user:', error);
       throw error;
@@ -29,17 +29,14 @@ const AuthService = {
   },
 
   logout: () => {
-    // Remove the user token from localStorage
     localStorage.removeItem('userToken');
   },
 
   isLoggedIn: () => {
-    // Check if the user is logged in based on the presence of the token in localStorage
     return !!localStorage.getItem('userToken');
   },
 
   getToken: () => {
-    // Retrieve the user token from localStorage
     return localStorage.getItem('userToken');
   },
 };
