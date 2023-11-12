@@ -7,8 +7,8 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import TimePicker from 'react-time-picker'
 import enUSLocale from "date-fns/locale/en-US";
+import axios from "axios";
 
 const locales = {
     "en-US": enUSLocale,
@@ -22,53 +22,38 @@ const localizer = dateFnsLocalizer({
     locales,
 });
 
-const events = [
-    {
-        title: "Big Meeting",
-        allDay: true,
-        start: new Date(2021, 6, 0),
-        end: new Date(2021, 6, 0),
-    },
-    {
-        title: "Vacation",
-        start: new Date(2021, 6, 7),
-        end: new Date(2021, 6, 10),
-    },
-    {
-        title: "Conference",
-        start: new Date(2021, 6, 20),
-        end: new Date(2021, 6, 23),
-    },
-];
 
 export function CalendarApp() {
-    const [newEvent, setNewEvent] = useState({ title: "", start: null, end: null });
-    const [allEvents, setAllEvents] = useState(events);
+    const [newEvent, setNewEvent] = useState({ title: "", date: null });
 
-    function handleAddEvent() {
-        // Check if start and end dates are selected
-        if (newEvent.start && newEvent.end) {
-            // Check for date clash with existing events
-            for (let i = 0; i < allEvents.length; i++) {
-                const d1 = new Date(allEvents[i].start);
-                const d2 = new Date(newEvent.start);
-                const d3 = new Date(allEvents[i].end);
-                const d4 = new Date(newEvent.end);
-
-                if ((d1 <= d2 && d2 <= d3) || (d1 <= d4 && d4 <= d3)) {
-                    alert("CLASH");
-                    return; // Exit function if there is a clash
-                }
+    async function handleAddEvent() {
+        // Check if date and end dates are selected
+        if (!newEvent.title || !newEvent.date) {
+            alert("Please add a title & select a date");
+            return;
+        }
+    
+        try {
+            // Send the new event data to the server for insertion into the database
+            const response = await axios.post('http://localhost:3000/create-event', newEvent);
+    
+            // If the event is successfully created in the database, update the calendar
+            if (response.data.event) {
+                setNewEvent({ title: "", date: null }); // Clear the form
+                // You might want to fetch the updated events from the server and update the calendar
+                // For simplicity, assuming that the server returns the updated events in the response
+                // const updatedEvents = await fetchUpdatedEvents();
+                // setAllEvents(updatedEvents);
             }
-
-            // Add the new event
-            setAllEvents([...allEvents, newEvent]);
-            // Reset the newEvent state
-            setNewEvent({ title: "", start: null, end: null });
-        } else {
-            alert("Please select both start and end dates");
+        } catch (error) {
+            console.error('Error adding event:', error);
+            console.error('Error response:', error.response); // Log the detailed error response
+            alert('Error adding event. Please try again.');
         }
     }
+
+    // Assuming 'allEvents' is a state variable containing the events for the calendar
+    const allEvents = []; // Replace this with your actual events
 
     return (
         <div className="calendar">
@@ -85,11 +70,10 @@ export function CalendarApp() {
                     className="m-1 text-gray-700 py-1 px-2 font-semibold max-w-[120px]"
                     placeholderText="Select Date"
                     // style={{ padding: "10px" }}
-                    selected={newEvent.start}
-                    onChange={(date) => setNewEvent({ ...newEvent, start: date, end: date })}
+                    selected={newEvent.date}
+                    onChange={(date) => setNewEvent({ ...newEvent, date: date })}
                     selectsStart
-                    startDate={newEvent.start}
-                    endDate={newEvent.end}
+                    startDate={newEvent.date}
                     dateFormat="MM/dd/yyyy"
                 />
                 <button style={{ margin: "10px" }} onClick={handleAddEvent}>
