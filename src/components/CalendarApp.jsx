@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
@@ -25,6 +25,7 @@ const localizer = dateFnsLocalizer({
 
 export function CalendarApp() {
     const [newEvent, setNewEvent] = useState({ title: "", date: null });
+    const [allEvents, setAllEvents] = useState([]);
 
     async function handleAddEvent() {
         // Check if date and end dates are selected
@@ -51,9 +52,20 @@ export function CalendarApp() {
             alert('Error adding event. Please try again.');
         }
     }
+    async function getEvents() {
+        try {
+          const response = await axios.get('http://localhost:3000/get-events');
+          setAllEvents(response.data.events); // Update the allEvents state with fetched events
+        } catch (error) {
+          console.error('Error fetching all events:', error);
+        }
+      }
+    
+      useEffect(() => {
+        // Call the function when the component mounts
+        getEvents();
+      }, []);
 
-    // Assuming 'allEvents' is a state variable containing the events for the calendar
-    const allEvents = []; // Replace this with your actual events
 
     return (
         <div className="calendar">
@@ -79,21 +91,13 @@ export function CalendarApp() {
                 <button style={{ margin: "10px" }} onClick={handleAddEvent}>
                     Add Event
                 </button>
+                <ol>
+                    {allEvents.map((event, index) => (
+                    <li key={index}>{event.title} - {event.date}</li>
+                    ))}
+                </ol>
             </div>
-            <Calendar
-                localizer={localizer}
-                events={allEvents}
-                startAccessor="start"
-                endAccessor="end"
-                style={{
-                    color: "red",
-                    backgroundColor: "black",
-                    height: 300,
-                    margin: "24px",
-                    overflow: "auto",
-                    zIndex: 0,
-                }}
-            />
+            
         </div>
     );
 }
