@@ -11,18 +11,19 @@ export default {
     "./src/**/*.tsx",
     "./public/index.html", // Include your index.html file
   ],
-  purge: [
-    // other paths
-    "./src/**/*.html",
-    "./src/**/*.js",
-    "./src/**/*.jsx",
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-  ],
+  // purge: [
+  //   other paths
+  //   "./src/**/*.html",
+  //   "./src/**/*.js",
+  //   "./src/**/*.jsx",
+  //   "./src/**/*.ts",
+  //   "./src/**/*.tsx",
+  // ],
   theme: {
     extend: {
       textShadow: {
         'default': '2px 2px 2px black',
+        'dark': '1px 1px 1px pink',
       },
     },
   },

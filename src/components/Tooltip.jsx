@@ -2,16 +2,17 @@
 import PropTypes from 'prop-types';
 
 function Tooltip(props) {
-  const { children, text } = props;
+    // needs improvements
+    const { children, text } = props;
 
-  return (
-    <div className="tooltip-container">
-      {children}
-      <div className="tooltip">
-        <span>{text}</span>
-      </div>
-    </div>
-  );
+    return (
+        <div>
+        {children}
+        <div className="">
+            <span className="bg-white">{text}</span>
+        </div>
+        </div>
+    );
 }
 
 Tooltip.propTypes = {
