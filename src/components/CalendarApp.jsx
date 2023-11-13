@@ -20,7 +20,7 @@ export function CalendarApp() {
     
         try {
             // Send the new event data to the server for insertion into the database
-            const response = await axios.post('http://localhost:3000/create-event', newEvent);
+            const response = await axios.post('https://olsg-be-4571e51de231.herokuapp.com/create-event', newEvent);
     
             // If the event is successfully created in the database, update the calendar
             if (response.data.event) {
@@ -34,7 +34,7 @@ export function CalendarApp() {
     }
     async function getEvents() {
         try {
-          const response = await axios.get("http://localhost:3000/get-events");
+          const response = await axios.get("https://olsg-be-4571e51de231.herokuapp.com/get-events");
           setAllEvents(response.data.events);
         } catch (error) {
           console.error("Error fetching all events:", error);
