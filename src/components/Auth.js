@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://olsg-be-4571e51de231.herokuapp.com/';
+const API_URL = 'http://localhost:3000';
 
 const AuthService = {
   register: async (username, password) => {
