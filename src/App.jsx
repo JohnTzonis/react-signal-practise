@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Navbar } from "./components/Navbar";
+// import { Sidebar } from "./components/Sidebar"
 import { ToDoList } from "./components/ToDoList";
 import { CalendarApp } from "./components/CalendarApp";
-import Profile from "./components/MemberList";
+import GuildMembers from "./components/GuildMembers";
 import Tabs from "./components/Tabs";
-// import GuildMembers from "./components/GuildMembers";
-import UserProfile from "./components/UserProfile";
 
 function App() {
   const accountId = '12345678901234567';
@@ -19,14 +18,30 @@ function App() {
       index: 'notebook',
       label: "notebook"
     },
-    {
-      index: 'profile',
-      label: "profile"
-    },
-    // ... (other tabs)
+    // {
+    //   index: 'machine_translation',
+    //   label: "MT services"
+    // },
+    // {
+    //   index: 'translation_memory_groups',
+    //   label: "TM groups"
+    // },
+    // {
+    //   index: 'issues_categories',
+    //   label: "Issues categories"
+    // },
+    // {
+    //   index: 'translation_checks',
+    //   label: "Translation checks"
+    // },
+    // {
+    //   index: 'styleguides',
+    //   label: "Style guides"
+    // },
   ];
-
   const defaultTab = "calendar";
+
+  // Use state to manage the active tab dynamically
   const [activeTab, setActiveTab] = useState(defaultTab);
 
   return (
@@ -35,11 +50,10 @@ function App() {
         <Navbar />
       </div>
       <div className="w-full h-[100vh] flex">
-        <div className="w-1/5 p-4 border border-r-black">
-          {/* <GuildMembers /> */}
-          <span>Under Construction</span>
+        <div className="w-1/4 p-4 border border-r-black">
+          <p className="text-gray-700">Left Column Content</p>
         </div>
-        <div className="w-3/5 border border-r-black">
+        <div className="w-1/2 border border-r-black">
           <div className="flex flex-col">
             <div className="w-full bg-gray-800 h-[80px]">
               <Tabs active={activeTab}>
@@ -56,18 +70,33 @@ function App() {
               </Tabs>
             </div>
             <div className="h-[100vh] bg-teal-700 overflow-auto p-4">
-              {activeTab === "calendar" && <CalendarApp />}
-              {activeTab === "notebook" && <ToDoList />}
-              {activeTab === "profile" && <UserProfile />}
+              {activeTab === "calendar" && 
+                  <CalendarApp />
+              }
+              {activeTab === "notebook" &&
+                  <ToDoList />
+              }
             </div>
           </div>
         </div>
-        <div className="w-1/5 p-4 border border-r-black">
-          <Profile accountId={accountId} />
+        <div className="w-1/4 p-4 border border-r-black">
+          <GuildMembers accountId={accountId} />
         </div>
       </div>
     </>
   );
 }
 
-export default App;
+
+export default App
+
+
+      // <Navbar />
+      // <div className="flex">
+      //   <ToDoList />
+      //   <div className="flex-grow">
+      //       
+      //   </div>
+      //   
+      // </div>
+      //  <Sidebar />

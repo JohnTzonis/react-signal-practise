@@ -19,7 +19,7 @@ export function Navbar() {
     //     fetchPlayerData();
     // }, [accountId]);
 
-    // console.log("Navbar rendered");
+    console.log("Navbar rendered");
 
     return (
         <>
