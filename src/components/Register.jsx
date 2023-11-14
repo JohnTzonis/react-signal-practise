@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import AuthService from './Auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import toastConfig from './toastConfig';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -9,8 +12,10 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       const result = await AuthService.register(username, password);
+      toast.success(`Welcome, ${username}`, toastConfig);
       console.log('Registration successful:', result);
     } catch (error) {
+      toast.success(`Error registering user: ${username}`, toastConfig);
       console.error('Error registering user:', error);
     }
   };
@@ -24,23 +29,22 @@ const Register = () => {
   
       // AuthService.login returns the user information directly
       const { username: loggedInUsername } = await AuthService.login(username, password);
+      toast.success(`Welcome, ${username}`, toastConfig);
       console.log('Login successful:', loggedInUsername);
       setLoggedInUser({ username: loggedInUsername });
-      // Handle success, redirect, etc.
     } catch (error) {
+      toast.success(`Invalid username or password. Please try again.`, toastConfig);
       console.error('Error logging in user:', error);
-      // Handle error, show an alert, etc.
     }
   };
   
-
   const handleLogout = () => {
-    // Implement logout logic (clear user information, redirect, etc.)
     setLoggedInUser(null);
   };
 
   return (
     <div className="flex flex-col items-center">
+      <ToastContainer />
       {loggedInUser ? (
         <div className="flex flex-col text-base">
           <div className="m-1 px-2 p-1 text-black text-shadow-dark font-semibold bg-gradient-to-r from-blue-500 to-green-500 border-2 border-black">
