@@ -5,7 +5,7 @@ const API_URL = 'http://localhost:3000';
 const AuthService = {
   register: async (username, password) => {
     try {
-      const response = await axios.post(`${API_URL}/register`, { username, password }, { withCredentials: true });
+      const response = await axios.post(`${API_URL}/register`, { username, password })
       return response.data;
     } catch (error) {
       console.error('Error registering user:', error);
@@ -15,7 +15,7 @@ const AuthService = {
 
   login: async (username, password) => {
     try {
-      const response = await axios.post(`${API_URL}login`, { username, password });
+      const response = await axios.post(`${API_URL}/login`, { username, password });
       const { data } = response;
 
       // Store the user token in localStorage
